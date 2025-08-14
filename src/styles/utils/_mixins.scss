@@ -20,6 +20,12 @@
   }
 }
 
+@mixin full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
 @mixin on-tablets {
   @media (min-width: 640px) {
     @content;
@@ -32,14 +38,8 @@
   }
 }
 
-@mixin on-large-desktops {
+@mixin on-big-desktops {
   @media (min-width: 1600px) {
-    @content;
-  }
-}
-
-@mixin on-extra-large-desktops {
-  @media (min-width: 2560px) {
     @content;
   }
 }

@@ -2,11 +2,8 @@
   box-sizing: border-box;
   background-color: #2c2c2c;
   min-width: 320px;
-  border-radius: 30px;
-    overflow: hidden;
-
-  // CSS змінна для висоти хедера
-  --header-height: calc(18px + 28px + 18px); // top + content + bottom
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
 
   &__top {
     position: fixed;
@@ -35,9 +32,11 @@
     flex-direction: column;
 
     @include on-desktops {
-      height: 800px;
+      height: calc(100vh - 120px);
+      max-height: 800px;
       flex-direction: row;
       justify-content: space-between;
+      margin-top: 120px;
     }
   }
 
@@ -96,7 +95,7 @@
 
     z-index: 1000;
 
-    margin-top: var(--header-height);
+    margin-top: 66px;
   }
 
   &__burger-nav {
@@ -143,10 +142,6 @@
     }
   }
 
-  &__logo {
-    line-height: 0;
-  }
-
   &__hire-link {
     margin-left: auto;
 
@@ -163,6 +158,10 @@
       margin-top: 8px;
       border-radius: 4px;
     }
+
+    &:hover::after {
+      animation: running-line 2s linear infinite;
+    }
   }
 
   &__content {
@@ -175,7 +174,7 @@
     }
 
     @include on-desktops {
-      padding-top: 240px;
+      padding-top: 120px;
       padding-bottom: 205px;
       width: 355px;
     }
@@ -240,13 +239,29 @@
     right: 0;
     bottom: 0;
 
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    border-radius: 30px;
+    overflow: hidden;
+
+    @include full-width;
 
     @include on-desktops {
-      width: 50%;
+      width: 50vw;
       height: 100%;
+      border-radius: 30px 0;
     }
+  }
+}
+
+@keyframes running-line {
+  0% {
+    width: 0%;
+  }
+
+  33% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
   }
 }

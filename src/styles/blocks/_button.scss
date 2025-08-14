@@ -16,4 +16,6 @@
   @include on-tablets {
     width: 264px;
   }
+
+  @include hover (transform, scale(1.2));
 }
