@@ -1,18 +1,19 @@
 .about-us {
   &__content {
-    margin: 120px auto;
+    margin: 0 auto;
+    padding-block: 120px;
 
     @include on-tablets {
-      margin: 148px auto;
+      padding-block: 148px;
     }
 
-        @include on-desktops {
+    @include on-desktops {
       max-width: 716px;
     }
 
     @include on-big-desktops {
       max-width: 754px;
-   }
+    }
   }
 
   &__title {
@@ -39,11 +40,11 @@
     line-height: 150%;
     letter-spacing: 0;
     text-align: center;
-    color: #6C788B;
+    color: #6c788b;
     margin: 0 auto;
     padding: 0;
 
-    @include on-tablets{
+    @include on-tablets {
       font-size: 24px;
     }
   }
