@@ -94,6 +94,8 @@
     border-radius: 16px;
     height: 264px;
 
+    @include hover (box-shadow, 12px 24px #0f53db14);
+
     @include on-tablets {
       width: calc((100% - 30px) / 2);
     }
