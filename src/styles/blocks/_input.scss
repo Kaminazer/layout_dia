@@ -17,6 +17,10 @@
   &__message {
     resize: none;
     margin-bottom: 56px;
+
+    @include on-tablets {
+      margin-bottom: 80px;
+    }
   }
 
   &:focus {

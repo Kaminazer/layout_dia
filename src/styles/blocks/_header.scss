@@ -41,7 +41,10 @@
   }
 
   &__nav {
+    display: none;
+
     @include on-desktops {
+      display: block;
       margin-inline: auto;
     }
   }

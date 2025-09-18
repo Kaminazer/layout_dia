@@ -1,14 +1,27 @@
 .nav {
-  display: none;
-
-  @include on-desktops {
-    display: block;
-  }
-
   &__list {
-    @include on-desktops {
+      @include on-desktops {
+        display: flex;
+        gap: 20px;
+    }
+
+    &--footer {
+      & > .nav__item {
+        width: fit-content;
+      }
+
       display: flex;
-      gap: 20px;
+      flex-direction: column;
+      gap: 24px;
+
+      @include on-tablets {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      @include on-desktops {
+        gap: 64px;
+      }
     }
   }
 
