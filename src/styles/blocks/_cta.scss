@@ -1,5 +1,5 @@
 .cta {
-  background-color: #FFF;
+  background-color: $color-bg;
 
   &__container {
     margin-bottom: 120px;
@@ -37,7 +37,6 @@
     padding-block: 72px;
     text-align: center;
     font-weight: 600;
-    letter-spacing: 0;
     margin: 0 auto;
 
     @include on-tablets {
@@ -56,10 +55,10 @@
 
   &__title {
     margin: 0 0 24px;
-    font-family: Poppins, sans-serif;
+    font-family: $font-accent;
     font-size: 44px;
     line-height: 120%;
-    color: #253757;
+    color: $color-text;
 
     @include on-tablets {
       font-size: 52px;
@@ -71,15 +70,25 @@
   }
 
   &__text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-main;
+
     font-size: 22px;
     line-height: 150%;
-    color: #6C788B;
+    color: $color-text-secondary;
     margin: 0 0 56px;
 
     @include on-tablets {
       font-size: 24px;
       margin-bottom: 64px;
     }
+  }
+
+  &__card {
+    @include card-shadow;
+    @include radius-main;
+    
+    background: $color-bg;
+    color: $color-text;
+    font-family: $font-main;
   }
 }

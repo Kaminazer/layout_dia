@@ -11,7 +11,7 @@
     display: block;
     height: 2px;
     width: 0;
-    background-color: #2060f6;
+    background-color: $color-primary;
     transition: width 0.3s;
   }
 
@@ -42,4 +42,18 @@
   @media (min-width: 1600px) {
     @content;
   }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-shadow {
+  box-shadow: $shadow-main;
+}
+
+@mixin radius-main {
+  border-radius: $radius-main;
 }

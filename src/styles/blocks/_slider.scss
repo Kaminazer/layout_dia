@@ -24,7 +24,7 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: $color-bg;
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -32,7 +32,7 @@
 
     z-index: 10;
 
-    @include hover (background-color,#2060F6);
+    @include hover(background-color, $color-primary);
 
     &--prev {
       bottom: 108px;
@@ -50,7 +50,8 @@
     bottom: 24px;
     left: 20px;
 
-    font-family: "Open Sans", sans-serif;
+    font-family: $font-main;
+
     color: #fff;
     font-size: 14px;
     line-height: 140%;
@@ -62,7 +63,7 @@
       bottom: 24px;
       z-index: 10;
 
-      font-family: Poppins, sans-serif;
+      font-family: $font-accent;
       font-weight: 700;
       font-size: 13px;
       letter-spacing: 3px;
@@ -70,4 +71,3 @@
     }
   }
 }
-

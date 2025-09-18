@@ -1,14 +1,26 @@
 .feedback {
-  font-family: Poppins, sans-serif;
+  font-family: $font-main;
   font-weight: 600;
-  letter-spacing: 0;
-  color: #FFF;
+  color: $color-bg;
+
+  @include on-tablets {
+    max-width: 362px;
+  }
+
+  @include on-desktops {
+    grid-column: 1 / 6;
+  }
 
   &__title {
     margin: 0 0 48px;
 
     font-size: 32px;
     line-height: 130%;
+
+    @include on-tablets {
+      line-height: 150%;
+      margin-bottom: 56px;
+    }
   }
 
   &__inputs {
@@ -16,11 +28,15 @@
     flex-direction: column;
     gap: 40px;
     margin-bottom: 40px;
+
+    @include on-tablets {
+      gap: 48px;
+      margin-bottom: 48px;
+    }
   }
 
   &__button {
     border: none;
-    color: #FFF;
+    color: $color-bg;
   }
 }
-
